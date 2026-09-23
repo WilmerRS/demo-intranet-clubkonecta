@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import PanelLayout from './layouts/PanelLayout'
 import Comunicacion from './pages/Comunicacion'
 import Encuestas from './pages/Encuestas'
@@ -16,7 +16,7 @@ import VidaKonecta from './pages/VidaKonecta'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -36,6 +36,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
